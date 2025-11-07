@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Altos del Torrontés – Actividades</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .activity {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 60px;
+      gap: 20px;
+    }
+    .activity img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+      transition: transform 0.3s ease;
+    }
+    .activity img:hover {
+      transform: scale(1.05);
+    }
+    .activity-text {
+      flex: 1;
+      text-align: left;
+      font-size: 1.1em;
+      line-height: 1.7;
+    }
+    .icon {
+      font-size: 1.5em;
+      color: #8C1C13;
+      margin-right: 8px;
+    }
+    @media (max-width: 768px) {
+      .activity {
+        flex-direction: column;
+        text-align: center;
+      }
+      .activity-text {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Actividades & Experiencias</h1>
+    <p>Vivir los Valles Calchaquíes desde todos los sentidos</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="presentacion.html">Presentación</a>
+    <a href="ubicacion.html">Ubicación</a>
+    <a href="actividades.html" class="active">Actividades</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="filosofia.html">Filosofía</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Conectá con la naturaleza, la cultura y el vino</h2>
+      <p>
+        En Altos del Torrontés te invitamos a vivir experiencias únicas entre viñedos, montañas y tradiciones salteñas.
+        Cada actividad fue pensada para que disfrutes del entorno, la gastronomía y la serenidad del lugar.
+      </p>
+    </section>
+
+    <!-- CATA DE VINOS -->
+    <section class="activity">
+      <img src="https://images.unsplash.com/photo-1618568949774-15d741a57a20" alt="Cata de vinos en bodega boutique">
+      <div class="activity-text">
+        <h3>🍷 Cata de vinos guiada</h3>
+        <p>Descubrí los secretos del vino de altura con nuestros sommeliers. Aprendé sobre aromas, notas y maridajes
+        mientras degustás las mejores etiquetas de la región.</p>
+      </div>
+    </section>
+
+    <!-- CABALGATAS -->
+    <section class="activity" style="flex-direction: row-reverse;">
+      <img src="https://images.unsplash.com/photo-1561136594-7f68413baa07" alt="Cabalgatas entre viñedos y montañas">
+      <div class="activity-text">
+        <h3>🐎 Cabalgatas entre viñedos</h3>
+        <p>Explorá los senderos de los Valles Calchaquíes a caballo, acompañado por guías locales que te mostrarán
+        la flora, la fauna y las historias del lugar.</p>
+      </div>
+    </section>
+
+    <!-- SPA ENTRE VIÑEDOS -->
+    <section class="activity">
+      <img src="https://images.unsplash.com/photo-1618220179428-22790b461013" alt="Spa entre viñedos">
+      <div class="activity-text">
+        <h3>💆‍♀️ Spa & Vinoterapia</h3>
+        <p>Relajate en nuestro spa inmerso en la naturaleza. Tratamientos con uvas y aceites locales, rodeado de
+        viñedos y el sonido del viento entre las montañas.</p>
+      </div>
+    </section>
+
+    <!-- GASTRONOMÍA -->
+    <section class="activity" style="flex-direction: row-reverse;">
+      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Gastronomía regional gourmet">
+      <div class="activity-text">
+        <h3>🍽️ Cocina Regional</h3>
+        <p>Saboreá la gastronomía del norte argentino con un menú de pasos elaborado por chefs locales.
+        Cada plato es un homenaje a los productos de la tierra salteña.</p>
+      </div>
+    </section>
+
+    <!-- CAMINATAS -->
+    <section class="activity">
+      <img src="https://images.unsplash.com/photo-1600014586932-bf93a5393cd4" alt="Senderismo por los valles">
+      <div class="activity-text">
+        <h3>🥾 Senderismo en los cerros</h3>
+        <p>Recorré los caminos ancestrales entre montañas, con vistas únicas y aire puro.
+        Caminatas de baja y media dificultad adaptadas a todos los visitantes.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>📍 Ruta Nacional 40 km 4349 – Animaná, Salta</p>
+    <p>📧 info@altosdeltorrontes.com | ☎ +54 387 400 0000</p>
+    <p><em>Proyecto académico – UNSAM – EEyN</em></p>
+  </footer>
+</body>
+</html>

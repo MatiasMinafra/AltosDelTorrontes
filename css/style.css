@@ -1,0 +1,260 @@
+/* ======= CONFIGURACIÓN GENERAL ======= */
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  color: #3A2E2B;
+  background-color: #F7F3EE;
+  scroll-behavior: smooth;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+a {
+  transition: all 0.3s ease;
+}
+
+/* ======= CABECERA ======= */
+header {
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') center/cover no-repeat;
+  position: relative;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+header .hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+header h1 {
+  font-size: 3em;
+  margin: 0;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+}
+
+header p {
+  font-size: 1.3em;
+  margin-top: 10px;
+}
+
+/* ======= BOTÓN PRINCIPAL ======= */
+.cta-btn {
+  display: inline-block;
+  background: #EBD3B3;
+  color: #3A2E2B;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+.cta-btn:hover {
+  background: #8C1C13;
+  color: white;
+}
+
+/* ======= MENÚ DE NAVEGACIÓN ======= */
+nav {
+  background: #8C1C13;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+nav a {
+  color: #F7F3EE;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+nav a:hover, nav a.active {
+  color: #EBD3B3;
+  text-decoration: underline;
+}
+
+/* ======= SECCIONES ======= */
+section {
+  padding: 60px 12%;
+  line-height: 1.8;
+  text-align: center;
+}
+section h2 {
+  color: #8C1C13;
+  margin-bottom: 20px;
+}
+
+/* ======= GALERÍAS ======= */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+.gallery img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+/* ======= IMÁGENES GRANDES ======= */
+section img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 20px auto;
+  display: block;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* ======= PIE DE PÁGINA ======= */
+footer {
+  background: #3A2E2B;
+  color: #EBD3B3;
+  text-align: center;
+  padding: 40px 20px;
+}
+footer p {
+  margin: 6px 0;
+}
+footer em {
+  font-size: 0.9em;
+  color: #EBD3B3;
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+  header {
+    padding: 80px 10px;
+  }
+  header h1 {
+    font-size: 2.2em;
+  }
+  section {
+    padding: 40px 8%;
+  }
+  nav a {
+    margin: 8px;
+  }
+  .gallery img {
+    max-width: 90%;
+  }
+}
+
+/* ======= CARRUSEL ======= */
+.carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  animation: fadeEffect 2s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.8);
+}
+
+#habitaciones, #hotel-exterior, #spa {
+  padding: 60px 12%;
+  text-align: center;
+  line-height: 1.8;
+}
+
+#habitaciones h2, #hotel-exterior h2, #spa h2 {
+  color: #8C1C13;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 15px;
+}
+
+#habitaciones p, #hotel-exterior p, #spa p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+}
+
+#habitaciones img, #hotel-exterior img, #spa img {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 10px;
+  margin: 25px auto;
+  display: block;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#habitaciones img:hover, #hotel-exterior img:hover, #spa img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.gallery img {
+  max-width: 290px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+#spa {
+  background-color: #EBD3B3;
+}

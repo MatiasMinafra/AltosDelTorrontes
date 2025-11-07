@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto – Altos del Torrontés</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header>
+    <h1>Altos del Torrontés</h1>
+    <p>Hotel Boutique · Wine & Spa</p>
+  </header>
+
+  <!-- MENÚ -->
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="presentacion.html">Presentación</a>
+    <a href="ubicacion.html">Ubicación</a>
+    <a href="actividades.html">Actividades</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="filosofia.html">Filosofía</a>
+    <a href="contacto.html" class="active">Contacto</a>
+  </nav>
+
+  <!-- SECCIÓN DE CONTACTO -->
+  <section>
+    <h2>Contacto</h2>
+    <p>
+      Si querés realizar una reserva, conocer más sobre nuestras experiencias o simplemente saludarnos, 
+      completá el siguiente formulario o comunicate a través de nuestros canales oficiales.
+    </p>
+  </section>
+
+  <!-- FORMULARIO -->
+  <section style="background-color:#EBD3B3; padding:40px; text-align:center;">
+    <form action="#" method="post" style="max-width:600px; margin:auto; text-align:left;">
+      <label for="nombre"><strong>Nombre:</strong></label><br>
+      <input type="text" id="nombre" name="nombre" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:5px; border:1px solid #ccc;"><br>
+
+      <label for="email"><strong>Email:</strong></label><br>
+      <input type="email" id="email" name="email" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:5px; border:1px solid #ccc;"><br>
+
+      <label for="mensaje"><strong>Mensaje:</strong></label><br>
+      <textarea id="mensaje" name="mensaje" rows="5" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:5px; border:1px solid #ccc;"></textarea><br>
+
+      <button type="submit" style="background-color:#8C1C13; color:white; padding:12px 20px; border:none; border-radius:5px; cursor:pointer; font-weight:bold;">
+        Enviar mensaje
+      </button>
+    </form>
+  </section>
+
+  <!-- MAPA -->
+  <section style="text-align:center; padding:40px;">
+    <h2>¿Dónde estamos?</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.080274389308!2d-65.937524!3d-26.083245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942228b2f441db05%3A0xb3f2b6b8a3e4e97b!2sAniman%C3%A1%2C%20Salta!5e0!3m2!1ses-419!2sar!4v1730818363010!5m2!1ses-419!2sar"
+      width="80%"
+      height="400"
+      style="border:0; border-radius:10px; margin-top:20px;"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>📍 Ruta Nacional 40 km 4349 – Animaná, Salta</p>
+    <p>📧 info@altosdeltorrontes.com | ☎ +54 387 400 0000</p>
+    <p><em>Proyecto académico – UNSAM – EEyN</em></p>
+  </footer>
+
+</body>
+</html>

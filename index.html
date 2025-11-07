@@ -1,91 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Altos del Torrontés – Hotel Boutique, Wine & Spa</title>
-    <style>
-        body {font-family: 'Lato', sans-serif; margin: 0; color: #3A2E2B; background-color: #F7F3EE;}
-        header {background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') center/cover no-repeat; color: white; text-align: center; padding: 120px 20px;}
-        header h1 {font-family: 'Playfair Display', serif; font-size: 3em; margin: 0;}
-        header p {font-size: 1.3em;}
-        nav {background: #8C1C13; display: flex; justify-content: center; padding: 10px; position: sticky; top: 0; z-index: 1000;}
-        nav a {color: #F7F3EE; text-decoration: none; margin: 0 20px; font-weight: bold;}
-        section {padding: 60px 15%; line-height: 1.8;}
-        h2 {font-family: 'Playfair Display', serif; color: #8C1C13; margin-bottom: 20px;}
-        .gallery img {width: 100%; max-width: 300px; margin: 10px; border-radius: 8px;}
-        .gallery {display: flex; flex-wrap: wrap; justify-content: center;}
-        footer {background: #3A2E2B; color: #EBD3B3; text-align: center; padding: 40px 20px;}
-        footer p {margin: 5px 0;}
-        .cta-btn {display: inline-block; background: #EBD3B3; color: #3A2E2B; padding: 12px 24px; border-radius: 5px; text-decoration: none; margin-top: 20px; font-weight: bold;}
-        .cta-btn:hover {background: #8C1C13; color: white;}
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Altos del Torrontés – Hotel Boutique · Wine & Spa</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Altos del Torrontés</h1>
-        <p>Hotel Boutique, Wine & Spa</p>
-        <a href="#presentacion" class="cta-btn">Descubrí la experiencia</a>
-    </header>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Altos del Torrontés</h1>
+      <p>Hotel Boutique · Wine & Spa</p>
+      <a href="presentacion.html" class="cta-btn">Descubrí la experiencia</a>
+    </div>
+  </header>
 
-    <nav>
-        <a href="#presentacion">Presentación</a>
-        <a href="#ubicacion">Ubicación</a>
-        <a href="#actividades">Actividades</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#filosofia">Filosofía</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
+  <nav class="navbar">
+    <a href="index.html" class="active">Inicio</a>
+    <a href="presentacion.html">Presentación</a>
+    <a href="ubicacion.html">Ubicación</a>
+    <a href="actividades.html">Actividades</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="filosofia.html">Filosofía</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
 
-    <section id="presentacion">
-        <h2>Presentación</h2>
-        <p>Altos del Torrontés es un hotel boutique inmerso en los viñedos de Animaná, Salta. Combina hospitalidad, naturaleza y enoturismo, ofreciendo una experiencia sensorial que conecta el descanso con la cultura vitivinícola del norte argentino. Diseñado con materiales de la región y arquitectura que armoniza con el paisaje, invita a vivir el espíritu salteño en un entorno de calma y exclusividad.</p>
+  <main>
+    <section class="intro">
+      <h2>Bienvenido a los Valles Calchaquíes</h2>
+      <p>
+        Un refugio boutique entre viñedos y montañas, donde la naturaleza, el descanso
+        y el vino de altura se encuentran en perfecta armonía. Altos del Torrontés
+        combina hospitalidad, elegancia y autenticidad en el corazón de Salta.
+      </p>
     </section>
 
-    <section id="ubicacion" style="background-color:#EBD3B3;">
-        <h2>Ubicación y Entorno</h2>
-        <p>📍 Ruta Nacional 40 km 4349 – Bodega Dal Borgo – Animaná, Salta.<br>
-        A tan solo 12 km del centro de Cafayate, en el corazón de los Valles Calchaquíes. Rodeado de montañas rojizas y viñedos de altura (1.700 m.s.n.m.), ofrece el equilibrio perfecto entre naturaleza, cultura y tradición vitivinícola.</p>
+    <section class="feature">
+      <img src="https://images.unsplash.com/photo-1533832451743-f6a1f52516a3" alt="Viñedos de Salta">
+      <div class="feature-text">
+        <h3>Un lugar donde el tiempo se detiene</h3>
+        <p>
+          Inspirado en la tranquilidad de los viñedos de Animaná, nuestro hotel
+          ofrece una experiencia única de conexión con la tierra, el vino y la cultura norteña.
+        </p>
+        <a href="servicios.html" class="cta-btn">Conocé nuestros servicios</a>
+      </div>
     </section>
+  </main>
 
-    <section id="actividades">
-        <h2>Actividades y Atractivos</h2>
-        <div class="gallery">
-            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Viñedos">
-            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Cata de vinos">
-            <img src="https://images.unsplash.com/photo-1535968883563-2220a3a5d3a9" alt="Cabalgatas">
-        </div>
-        <p>• Catas y visitas guiadas 🍷<br>
-        • Talleres de blending (crear tu propio vino)<br>
-        • Cabalgatas y senderismo 🐎<br>
-        • Spa con vinoterapia 💆‍♀️<br>
-        • Gastronomía regional de autor 🍽️<br>
-        • Actividades familiares y cuidado infantil 👨‍👩‍👧‍👦</p>
-    </section>
-
-    <section id="servicios" style="background-color:#F7F3EE;">
-        <h2>Servicios</h2>
-        <p>🛏️ 15 habitaciones exclusivas con vista a los viñedos<br>
-        🏊 Piscina infinity y climatizada<br>
-        🍽️ Restaurante de autor con menú de pasos y maridaje<br>
-        💆 Spa con vinoterapia y yoga entre viñedos<br>
-        👨‍👩‍👧 Actividades y cuidado infantil<br>
-        🚗 Estacionamiento privado<br>
-        📶 Wi-Fi y servicio de lavandería</p>
-    </section>
-
-    <section id="filosofia" style="background-color:#EBD3B3;">
-        <h2>Filosofía del Lugar</h2>
-        <p>Nuestra misión es ofrecer a cada huésped una experiencia única de descanso y conexión en los viñedos salteños, en armonía con la naturaleza y la identidad local. Nuestra visión es consolidarnos como el hotel boutique enológico más auténtico del norte argentino.</p>
-    </section>
-
-    <footer id="contacto">
-        <h2>Contacto</h2>
-        <p>📍 Ruta Nacional 40 km 4349 – Animaná, Salta<br>
-        📧 info@altosdeltorrontes.com<br>
-        ☎️ +54 387 400 0000</p>
-        <p><em>Proyecto académico – Servicios Turísticos II – UNSAM – EEyN</em><br>
-        Integrantes: Díaz Lizarraga, Dionisio, González Opanasuk, Krzyminski, Perteagudo</p>
-    </footer>
+  <footer>
+    <p>📍 Ruta Nacional 40 km 4349 – Animaná, Salta</p>
+    <p>📧 info@altosdeltorrontes.com | ☎ +54 387 400 0000</p>
+    <p class="copy">© 2025 Altos del Torrontés – Todos los derechos reservados</p>
+  </footer>
 </body>
 </html>
