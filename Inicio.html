@@ -1,61 +1,199 @@
-<!-- 🏨 SECCIÓN HABITACIONES -->
-<section id="habitaciones">
-  <h2>Habitaciones</h2>
-  <p>
-    En Altos del Torrontés, cada habitación combina el encanto del norte argentino con el confort moderno.
-    Los interiores están decorados con materiales nobles, tejidos artesanales y amplios ventanales que permiten
-    disfrutar del imponente paisaje de los Valles Calchaquíes.
-  </p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Altos del Torrontés – Hotel Boutique en los Valles Calchaquíes</title>
+  <link rel="stylesheet" href="css/style.css?v=3001">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    /* ======= PORTADA ======= */
+    .hero {
+      position: relative;
+      height: 110vh; /* 🔹 más grande que antes */
+      background: url('img/Viñedo.png') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      overflow: hidden;
+      animation: fadeIn 1.5s ease-in-out;
+    }
 
-  <!-- Imagen principal -->
-  <img src="img/AltosTorrontes.jpg" alt="Habitación principal del hotel boutique Altos del Torrontés">
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.7));
+    }
 
-  <!-- Galería de habitaciones -->
-  <div class="gallery">
-    <img src="img/hotel_torre.jpg" alt="Habitación doble con terraza y vista a los viñedos">
-    <img src="img/hotel_2.jpg" alt="Suite rústica con decoración moderna y ventanales amplios">
-    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=80" alt="Habitación con estilo minimalista y vista a las montañas">
-  </div>
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 20px;
+      animation: fadeUp 2s ease-out;
+    }
 
-  <p>
-    Contamos con <strong>15 habitaciones exclusivas</strong>, cada una diseñada para ofrecer un ambiente cálido,
-    elegante y relajante. Todas disponen de baño privado, climatización, servicio de habitación y vistas únicas
-    a los viñedos o a las montañas.
-  </p>
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
 
-  <p>
-    Disfrutá de un descanso auténtico con el aroma del vino y el silencio de los Valles Calchaquíes.  
-    Nuestro equipo se encargará de que cada detalle haga de tu estadía una experiencia inolvidable.
-  </p>
-</section>
+    @keyframes fadeUp {
+      from {opacity: 0; transform: translateY(40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
 
-<!-- 🌿 SECCIÓN SERVICIOS -->
-<section id="servicios" style="background-color:#EBD3B3;">
-  <h2>Servicios del Hotel</h2>
-  <p>
-    En Altos del Torrontés buscamos que tu visita combine confort, bienestar y enoturismo.  
-    Nuestro hotel ofrece una variedad de servicios diseñados para que cada huésped disfrute
-    del equilibrio entre descanso, naturaleza y placer.
-  </p>
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8em, 6vw, 4.5em);
+      margin-bottom: 20px;
+      text-shadow: 0 6px 18px rgba(0,0,0,0.6);
+      letter-spacing: 1px;
+    }
 
-  <ul class="servicios-lista">
-    <li>🛏️ Habitaciones con vista panorámica a los viñedos</li>
-    <li>🏊 Piscina climatizada estilo infinity</li>
-    <li>💆 Spa con vinoterapia, masajes y tratamientos naturales</li>
-    <li>🍽️ Restaurante gourmet con cocina regional de autor</li>
-    <li>🍷 Catas privadas y visitas guiadas a bodegas locales</li>
-    <li>🚗 Estacionamiento privado y servicio de transfer</li>
-    <li>📶 Wi-Fi libre en todas las áreas</li>
-  </ul>
+    .hero p {
+      font-size: 1.4em;
+      line-height: 1.7;
+      margin-bottom: 30px;
+      text-shadow: 0 3px 12px rgba(0,0,0,0.6);
+    }
 
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1601918774946-25832a4be0d4?auto=format&fit=crop&w=800&q=80" alt="Spa del hotel con vista a los viñedos">
-    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80" alt="Piscina infinity con vista a los cerros">
-    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Restaurante gourmet del hotel">
-  </div>
+    .cta-btn {
+      background: #EBD3B3;
+      color: #3A2E2B;
+      padding: 14px 34px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: 0.3s;
+    }
+    .cta-btn:hover {
+      background: #8C1C13;
+      color: #fff;
+      transform: scale(1.05);
+    }
 
-  <p>
-    Cada espacio fue pensado para brindar armonía y conexión con la naturaleza.
-    Viví una experiencia única entre vinos, montañas y el confort de nuestro hotel boutique.
-  </p>
-</section>
+    /* ======= SECCIONES ======= */
+    section {
+      padding: 70px 20px;
+      text-align: center;
+      line-height: 1.8;
+      background-color: #F7F3EE;
+    }
+
+    section h2 {
+      color: #8C1C13;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2em;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      max-width: 900px;
+      margin: 0 auto 25px;
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #3A2E2B;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 340px;
+      aspect-ratio: 4 / 3;
+      border-radius: 14px;
+      object-fit: cover;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.06);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+    }
+
+    footer {
+      background: #8C1C13;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= MENÚ ======= -->
+  <nav>
+    <a href="index.html" class="active">Inicio</a>
+    <a href="presentacion.html">Presentación</a>
+    <a href="ubicacion.html">Ubicación</a>
+    <a href="actividades.html">Actividades</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="filosofia.html">Filosofía</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <!-- ======= PORTADA PRINCIPAL ======= -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Altos del Torrontés</h1>
+      <p>Un refugio de vino, descanso y naturaleza en el corazón de los Valles Calchaquíes.</p>
+      <a href="servicios.html" class="cta-btn">Descubrí más</a>
+    </div>
+  </section>
+
+  <!-- 🏨 HABITACIONES -->
+  <section id="habitaciones">
+    <h2>Habitaciones</h2>
+    <p>En Altos del Torrontés, cada habitación combina el encanto del norte argentino con el confort moderno. Los interiores están decorados con materiales nobles, tejidos artesanales y amplios ventanales que enmarcan los viñedos y las montañas.</p>
+
+    <div class="gallery">
+      <img src="img/hotel_torre.jpg" alt="Habitación doble con terraza y vista a los viñedos">
+      <img src="img/hotel_2.jpg" alt="Suite rústica con decoración moderna y ventanales amplios">
+      <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=80" alt="Habitación con estilo minimalista y vista a las montañas">
+    </div>
+
+    <p>Contamos con <strong>15 habitaciones exclusivas</strong>, cada una diseñada para ofrecer un ambiente cálido, elegante y relajante. Todas disponen de baño privado, climatización y vistas únicas a los viñedos o montañas.</p>
+  </section>
+
+  <!-- 🌿 SERVICIOS -->
+  <section id="servicios" style="background-color:#EBD3B3;">
+    <h2>Servicios del Hotel</h2>
+    <p>Buscamos que tu estadía combine confort, bienestar y enoturismo. Disfrutá de un equilibrio perfecto entre descanso y naturaleza.</p>
+
+    <ul style="list-style:none; padding:0; line-height:1.8;">
+      <li>🛏️ Habitaciones con vista panorámica a los viñedos</li>
+      <li>🏊 Piscina climatizada estilo infinity</li>
+      <li>💆 Spa con vinoterapia y masajes</li>
+      <li>🍽️ Restaurante gourmet con cocina regional</li>
+      <li>🍷 Catas privadas y visitas a bodegas</li>
+      <li>🚗 Estacionamiento y servicio de transfer</li>
+      <li>📶 Wi-Fi libre en todas las áreas</li>
+    </ul>
+
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1601918774946-25832a4be0d4?auto=format&fit=crop&w=800&q=80" alt="Spa con vista a los viñedos">
+      <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80" alt="Piscina infinity con vista a los cerros">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Restaurante gourmet del hotel">
+    </div>
+  </section>
+
+  <footer>
+    <p>Ruta Nacional 40 km 4349 – Animaná, Salta | info@altosdeltorrontes.com | ☎ +54 387 400 0000</p>
+    <p>© 2025 Altos del Torrontés – Todos los derechos reservados</p>
+  </footer>
+
+</body>
+</html>
