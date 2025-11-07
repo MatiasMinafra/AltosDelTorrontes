@@ -1,52 +1,106 @@
-<!-- 🏨 SECCIÓN HABITACIONES -->
-<section id="habitaciones">
-  <h2>Habitaciones</h2>
-  <p>
-    En Altos del Torrontés, cada habitación combina el encanto del norte argentino con el confort moderno.
-    Los interiores están decorados con materiales nobles, tejidos artesanales y amplios ventanales que permiten
-    disfrutar del imponente paisaje de los Valles Calchaquíes.
-  </p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios – Altos del Torrontés</title>
+  <!-- ⚡ Forzamos nueva versión del CSS -->
+  <link rel="stylesheet" href="css/style.css?v=1003" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+</head>
 
-  <!-- Imagen principal -->
-  <img src="img/AltosTorrontes.jpg" alt="Habitación principal del hotel boutique Altos del Torrontés">
+<body>
 
-  <!-- Galería de habitaciones -->
-  <div class="gallery">
-    <img src="img/hotel_torre.jpg" alt="Habitación doble con terraza y vista a los viñedos">
-    <img src="img/hotel_2.jpg" alt="Suite rústica con decoración moderna y ventanales amplios">
-    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=80" alt="Habitación con estilo minimalista y vista a las montañas">
-  </div>
+  <!-- ======= MENÚ ======= -->
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="presentacion.html">Presentación</a>
+    <a href="ubicacion.html">Ubicación</a>
+    <a href="actividades.html">Actividades</a>
+    <a href="servicios.html" class="active">Servicios</a>
+    <a href="filosofia.html">Filosofía</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
 
-  <p>
-    Contamos con <strong>15 habitaciones exclusivas</strong>, cada una diseñada para ofrecer un ambiente cálido,
-    elegante y relajante. Todas disponen de baño privado, climatización, servicio de habitación y vistas únicas
-    a los viñedos o a las montañas.
-  </p>
+  <!-- ======= CABECERA ======= -->
+  <header style="background: url('img/hotel_torre.jpg') center/cover no-repeat;">
+    <div class="hero-content">
+      <h1>Servicios</h1>
+      <p>Confort, vino y bienestar en el corazón de los Valles Calchaquíes</p>
+      <a href="contacto.html" class="cta-btn">Reservá tu estadía</a>
+    </div>
+  </header>
 
-  <p>
-    Disfrutá de un descanso auténtico con el aroma del vino y el silencio de los Valles Calchaquíes.  
-    Nuestro equipo se encargará de que cada detalle haga de tu estadía una experiencia inolvidable.
-  </p>
-</section>
+  <!-- ======= SECCIÓN SERVICIOS ======= -->
+  <section id="servicios">
+    <div class="servicios-intro">
+      <h2>Nuestros Servicios</h2>
+      <p>En <strong>Altos del Torrontés</strong> te ofrecemos una experiencia única que combina descanso, vino, gastronomía y naturaleza en un entorno de serenidad y elegancia.</p>
+    </div>
 
-<!-- 🌿 SECCIÓN SERVICIOS -->
-<section id="servicios">
-  <h2>Servicios del Hotel</h2>
-  <p>
-    En Altos del Torrontés buscamos que tu visita combine confort, bienestar y enoturismo.  
-    Nuestro hotel ofrece una variedad de servicios diseñados para que cada huésped disfrute
-    del equilibrio entre descanso, naturaleza y placer.
-  </p>
+    <div class="servicios-list">
 
-  <ul style="list-style: none; line-height: 1.8; padding: 0;">
-    <li>🛏️ Habitaciones con vista panorámica a los viñedos</li>
-    <li>🏊 Piscina climatizada estilo infinity</li>
-    <li>💆 Spa con vinoterapia, masajes y tratamientos naturales</li>
-    <li>🍽️ Restaurante gourmet con cocina regional de autor</li>
-    <li>🍷 Catas privadas y visitas guiadas a bodegas locales</li>
-    <li>🚗 Estacionamiento privado y servicio de transfer</li>
-    <li>📶 Wi-Fi libre en todas las áreas</li>
-  </ul>
+      <!-- HABITACIÓN SIMPLE -->
+      <article class="servicio-item">
+        <img src="https://matiasminafra.github.io/AltosDelTorrontes/img/Habitacion_simple.png" alt="Habitación simple con diseño natural">
+        <h2>Habitación Simple</h2>
+        <p>Un espacio cálido y funcional con detalles en madera y una decoración serena, ideal para disfrutar de la calma de los valles.</p>
+      </article>
 
-  <img src="https://images.unsplash.com/photo-1601918774946-25832a4be0d4?auto=format&fit=crop&w=800&q=80" alt="Spa del hotel con vista a los viñedos">
-</section>
+      <!-- HABITACIÓN DOBLE -->
+      <article class="servicio-item">
+        <img src="https://matiasminafra.github.io/AltosDelTorrontes/img/Habitacion_doble.png" alt="Habitación doble elegante con vistas a los viñedos">
+        <h2>Habitación Doble</h2>
+        <p>Amplia y luminosa, combina confort moderno con un estilo rústico-elegante. Perfecta para parejas que buscan relax y conexión con la naturaleza.</p>
+      </article>
+
+      <!-- HABITACIÓN TRIPLE -->
+      <article class="servicio-item">
+        <img src="https://matiasminafra.github.io/AltosDelTorrontes/img/Habitacion_triple.png" alt="Habitación triple amplia y luminosa">
+        <h2>Habitación Triple</h2>
+        <p>Ambientes amplios y confortables, ideales para familias o grupos de amigos, con materiales nobles y vistas al entorno natural.</p>
+      </article>
+
+      <!-- BAÑO -->
+      <article class="servicio-item">
+        <img src="https://matiasminafra.github.io/AltosDelTorrontes/img/Baño.png" alt="Baño moderno con terminaciones en piedra y madera">
+        <h2>Baños Privados</h2>
+        <p>Diseño moderno y elegante, con terminaciones en piedra, ducha vidriada y amenities de calidad premium.</p>
+      </article>
+
+      <!-- CAVA -->
+      <article class="servicio-item">
+        <img src="https://matiasminafra.github.io/AltosDelTorrontes/img/Barriles.png" alt="Cava subterránea con barriles de vino">
+        <h2>Cava Subterránea</h2>
+        <p>Un rincón único bajo tierra donde el aroma del vino y la piedra se combinan para ofrecer una experiencia inolvidable.</p>
+      </article>
+
+      <!-- DEGUSTACIÓN -->
+      <article class="servicio-item">
+        <img src="https://matiasminafra.github.io/AltosDelTorrontes/img/Barril.png" alt="Cava con degustación de vinos">
+        <h2>Degustación de Vinos</h2>
+        <p>Probá nuestros vinos de altura, elaborados con uvas Torrontés, en un ambiente cálido e íntimo.</p>
+      </article>
+
+      <!-- RESTAURANTE -->
+      <article class="servicio-item">
+        <img src="https://matiasminafra.github.io/AltosDelTorrontes/img/Mesa.png" alt="Restaurante con vista a los viñedos">
+        <h2>Restaurante & Vinos</h2>
+        <p>Sabores regionales y vinos seleccionados en un espacio con vistas panorámicas al paisaje salteño.</p>
+      </article>
+
+    </div>
+
+    <blockquote>
+      “Cada servicio está pensado para que vivas la esencia del norte argentino: su calma, su vino y su tierra.”
+    </blockquote>
+  </section>
+
+  <!-- ======= PIE DE PÁGINA ======= -->
+  <footer style="background:#8C1C13; color:white; padding:40px 20px; text-align:center;">
+    <p>Ruta Nacional 40 km 4349 – Animaná, Salta | info@altosdeltorrontes.com | ☎ +54 387 400 0000</p>
+    <p>© 2025 Altos del Torrontés – Todos los derechos reservados</p>
+  </footer>
+
+</body>
+</html>
