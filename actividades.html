@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Altos del Torrontés – Actividades</title>
-  <link rel="stylesheet" href="css/style.css?v=28">
+  <link rel="stylesheet" href="css/style.css?v=30">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 
   <style>
@@ -16,11 +16,12 @@
       scroll-behavior: smooth;
     }
 
+    /* ======= CABECERA ======= */
     header {
-      background: url('https://images.unsplash.com/photo-1506377295352-e3154d43ea9e?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      background: url('img/hotel_2.jpg') center/cover no-repeat;
       color: white;
       text-align: center;
-      padding: 120px 20px;
+      padding: 140px 20px;
       position: relative;
     }
 
@@ -38,16 +39,16 @@
 
     header h1 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2.2em, 5vw, 3em);
+      font-size: clamp(2.2em, 5vw, 3.2em);
       margin-bottom: 10px;
-      text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+      text-shadow: 0 3px 10px rgba(0,0,0,0.6);
     }
 
     header p {
       font-size: 1.3em;
     }
 
-    /* ======= ACTIVIDADES ======= */
+    /* ======= CONTENIDO ======= */
     main {
       padding: 60px 10%;
     }
@@ -68,19 +69,23 @@
       font-size: 1.1em;
     }
 
+    /* ======= BLOQUES DE ACTIVIDAD ======= */
     .activity {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
+      justify-content: center;
       margin-bottom: 70px;
-      gap: 30px;
+      gap: 40px;
     }
 
     .activity img {
       width: 100%;
-      max-width: 500px;
-      border-radius: 14px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+      max-width: 520px;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
       transition: transform 0.3s ease;
     }
 
@@ -93,6 +98,7 @@
       font-size: 1.1em;
       line-height: 1.7;
       text-align: left;
+      max-width: 500px;
     }
 
     .activity-text h3 {
@@ -153,7 +159,7 @@
 
     <!-- CATA DE VINOS -->
     <section class="activity">
-      <img src="https://images.unsplash.com/photo-1618568949774-15d741a57a20?auto=format&fit=crop&w=800&q=80" alt="Cata de vinos en bodega boutique">
+      <img src="https://images.unsplash.com/photo-1618568949774-15d741a57a20?auto=format&fit=crop&w=1200&q=80" alt="Cata de vinos en bodega boutique">
       <div class="activity-text">
         <h3>🍷 Cata de vinos guiada</h3>
         <p>Descubrí los secretos del vino de altura con nuestros sommeliers. Aprendé sobre aromas, notas y maridajes
@@ -162,14 +168,17 @@
     </section>
 
     <!-- CABALGATAS -->
-    <section class="activity" style="flex-direction: row-reverse;">
-      <img src="img/cabalgata.png" alt="Cabalgatas entre viñedos y montañas">
-      <div class="activity-text">
-        <h3>🐎 Cabalgatas entre viñedos</h3>
-        <p>Explorá los senderos de los Valles Calchaquíes a caballo, acompañado por guías locales que te mostrarán
-        la flora, la fauna y las historias del lugar.</p>
-      </div>
-    </section>
+<section class="activity" style="flex-direction: row-reverse;">
+  <img src="img/caballo.png" alt="Cabalgatas entre viñedos y montañas en los Valles Calchaquíes">
+  <div class="activity-text">
+    <h3>🐎 Cabalgatas entre viñedos</h3>
+    <p>
+      Explorá los senderos de los Valles Calchaquíes a caballo, acompañado por guías locales que te mostrarán
+      la flora, la fauna y las historias del lugar.  
+      Disfrutá del aire puro, los paisajes imponentes y la conexión con la naturaleza en su máxima expresión.
+    </p>
+  </div>
+</section>
 
     <!-- SPA ENTRE VIÑEDOS -->
     <section class="activity">
@@ -181,23 +190,25 @@
       </div>
     </section>
 
-    <!-- GASTRONOMÍA -->
+    <!-- SENDERISMO -->
     <section class="activity" style="flex-direction: row-reverse;">
-      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80" alt="Gastronomía regional gourmet">
-      <div class="activity-text">
-        <h3>🍽️ Cocina Regional</h3>
-        <p>Saboreá la gastronomía del norte argentino con un menú de pasos elaborado por chefs locales.
-        Cada plato es un homenaje a los productos de la tierra salteña.</p>
-      </div>
-    </section>
-
-    <!-- CAMINATAS -->
-    <section class="activity">
-      <img src="https://images.unsplash.com/photo-1600014586932-bf93a5393cd4?auto=format&fit=crop&w=800&q=80" alt="Senderismo por los valles">
+      <img src="img/senderismo.png" alt="Senderismo por los Valles Calchaquíes">
       <div class="activity-text">
         <h3>🥾 Senderismo en los cerros</h3>
         <p>Recorré los caminos ancestrales entre montañas, con vistas únicas y aire puro.
-        Caminatas de baja y media dificultad adaptadas a todos los visitantes.</p>
+        Caminatas de baja y media dificultad adaptadas a todos los visitantes, guiadas por expertos locales que te conectarán con la historia y naturaleza de los Valles Calchaquíes.</p>
+      </div>
+    </section>
+
+    <!-- GUÍAS LOCALES -->
+    <section class="activity">
+      <img src="img/Guia.png" alt="Guía turístico acompañando a visitantes por los cerros">
+      <div class="activity-text">
+        <h3>🧭 Guías Locales & Excursiones</h3>
+        <p>
+          Acompañate de guías expertos que conocen cada rincón de los Valles Calchaquíes.  
+          Descubrí los secretos del paisaje, la historia y la cultura del norte argentino a través de excursiones únicas, seguras y llenas de encanto.
+        </p>
       </div>
     </section>
   </main>
