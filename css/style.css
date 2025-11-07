@@ -28,7 +28,7 @@ header::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3));
 }
 
 header .hero-content {
@@ -37,13 +37,13 @@ header .hero-content {
 }
 
 header h1 {
-  font-size: 3em;
+  font-size: clamp(2em, 5vw, 3em);
   margin: 0;
   text-shadow: 0 3px 10px rgba(0,0,0,0.5);
 }
 
 header p {
-  font-size: 1.3em;
+  font-size: clamp(1.1em, 2.5vw, 1.3em);
   margin-top: 10px;
 }
 
@@ -88,186 +88,111 @@ nav a:hover, nav a.active {
 
 /* ======= SECCIONES ======= */
 section {
-  padding: 60px 12%;
-  line-height: 1.8;
+  padding: 70px 20px;
   text-align: center;
+  line-height: 1.8;
 }
+
 section h2 {
   color: #8C1C13;
+  font-family: 'Playfair Display', serif;
+  font-size: 2em;
   margin-bottom: 20px;
 }
 
-/* ======= GALERÍAS ======= */
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
+section p {
+  max-width: 900px;
+  margin: 0 auto 25px;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #3A2E2B;
 }
-.gallery img {
-  width: 100%;
-  max-width: 320px;
-  border-radius: 8px;
+
+/* ======= SERVICIOS ======= */
+#servicios {
+  background-color: #EBD3B3;
+  border-top: 4px solid #8C1C13;
+  border-bottom: 4px solid #8C1C13;
+  box-shadow: inset 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.servicios-intro {
+  margin-bottom: 50px;
+}
+
+.servicios-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+
+.servicio-item {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 14px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.gallery img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+  max-width: 340px;
 }
 
-/* ======= IMÁGENES GRANDES ======= */
-section img {
-  max-width: 100%;
-  border-radius: 10px;
-  margin: 20px auto;
-  display: block;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+.servicio-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
-/* ======= PIE DE PÁGINA ======= */
-footer {
-  background: #3A2E2B;
-  color: #EBD3B3;
-  text-align: center;
-  padding: 40px 20px;
-}
-footer p {
-  margin: 6px 0;
-}
-footer em {
-  font-size: 0.9em;
-  color: #EBD3B3;
+.servicio-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
 }
 
-/* ======= RESPONSIVE ======= */
-@media (max-width: 768px) {
-  header {
-    padding: 80px 10px;
-  }
-  header h1 {
-    font-size: 2.2em;
-  }
-  section {
-    padding: 40px 8%;
-  }
+.servicio-item h2 {
+  font-size: 1.4em;
+  color: #8C1C13;
+  margin-top: 15px;
+}
+
+.servicio-item p {
+  padding: 0 25px 30px;
+  line-height: 1.6;
+  font-size: 1em;
+  color: #3A2E2B;
+}
+
+/* ======= CITA / FRASE FINAL ======= */
+blockquote {
+  font-style: italic;
+  font-size: 1.2em;
+  color: #3A2E2B;
+  margin: 60px auto 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 25px 35px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+}
+
+/* ======= RESPONSIVE (MÓVIL) ======= */
+@media (max-width: 600px) {
   nav a {
     margin: 8px;
+    font-size: 0.9em;
   }
-  .gallery img {
+
+  header {
+    padding: 80px 15px;
+  }
+
+  .servicios-list {
+    gap: 25px;
+  }
+
+  .servicio-item {
     max-width: 90%;
   }
-}
 
-/* ======= CARRUSEL ======= */
-.carousel {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 0;
-}
-
-.slide {
-  display: none;
-  width: 100%;
-  height: 100%;
-  animation: fadeEffect 2s ease-in-out;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(70%);
-}
-
-@keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-.hero {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  color: white;
-  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.8);
-}
-
-#habitaciones, #hotel-exterior, #spa {
-  padding: 60px 12%;
-  text-align: center;
-  line-height: 1.8;
-}
-
-#habitaciones h2, #hotel-exterior h2, #spa h2 {
-  color: #8C1C13;
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 15px;
-}
-
-#habitaciones p, #hotel-exterior p, #spa p {
-  font-size: 1.1em;
-  margin-bottom: 30px;
-}
-
-#habitaciones img, #hotel-exterior img, #spa img {
-  width: 100%;
-  max-width: 900px;
-  border-radius: 10px;
-  margin: 25px auto;
-  display: block;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#habitaciones img:hover, #hotel-exterior img:hover, #spa img:hover {
-  transform: scale(1.02);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-}
-
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-}
-
-.gallery img {
-  max-width: 290px;
-  border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
-}
-
-#spa {
-  background-color: #EBD3B3;
-}
-
-.gallery img {
-  width: 100%;
-  max-width: 320px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+  section {
+    padding: 50px 10px;
+  }
 }
